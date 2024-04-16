@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c889c88-f221-4722-ae3a-fcda3ecae2fb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FolderBaiTap16042024.iml" beforeDir="false" afterPath="$PROJECT_DIR$/FolderBaiTap16042024.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aarraylist/ArrayListSelf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aarraylist/ArrayListSelf.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/alinkedlist/LinkedListSelf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/alinkedlist/LinkedListSelf.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/alinkedlist/LinkedListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/alinkedlist/LinkedListTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/alinkedlist/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/alinkedlist/Node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/alinkedlist/LinkedListSelfTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/alinkedlist/LinkedListSelfTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +40,16 @@
     "Application.ArrayListTest.executor": "Run",
     "Application.LinkedListTest.executor": "Run",
     "Application.Main.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "JUnit.LinkedListSelfTest.executor": "Coverage",
+    "JUnit.LinkedListSelfTest.testDeleteFirst.executor": "Run",
+    "JUnit.LinkedListSelfTest.testDeleteLast.executor": "Run",
+    "JUnit.LinkedListSelfTest.testInitialState.executor": "Run",
+    "JUnit.LinkedListSelfTest.testInsertFirst.executor": "Run",
+    "JUnit.LinkedListSelfTest.testInsertLast.executor": "Run",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
@@ -51,7 +61,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.LinkedListSelfTest">
     <configuration name="ArrayListTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="aarraylist.ArrayListTest" />
       <module name="FolderBaiTap16042024" />
@@ -65,22 +75,92 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ArrayListTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="aarraylist.ArrayListTest" />
+    <configuration name="LinkedListSelfTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="FolderBaiTap16042024" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="aarraylist.*" />
+          <option name="PATTERN" value="alinkedlist.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="alinkedlist" />
+      <option name="MAIN_CLASS_NAME" value="alinkedlist.LinkedListSelfTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LinkedListSelfTest.testDeleteFirst" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="FolderBaiTap16042024" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="alinkedlist.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="alinkedlist" />
+      <option name="MAIN_CLASS_NAME" value="alinkedlist.LinkedListSelfTest" />
+      <option name="METHOD_NAME" value="testDeleteFirst" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LinkedListSelfTest.testDeleteLast" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="FolderBaiTap16042024" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="alinkedlist.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="alinkedlist" />
+      <option name="MAIN_CLASS_NAME" value="alinkedlist.LinkedListSelfTest" />
+      <option name="METHOD_NAME" value="testDeleteLast" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LinkedListSelfTest.testInsertFirst" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="FolderBaiTap16042024" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="alinkedlist.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="alinkedlist" />
+      <option name="MAIN_CLASS_NAME" value="alinkedlist.LinkedListSelfTest" />
+      <option name="METHOD_NAME" value="testInsertFirst" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LinkedListSelfTest.testInsertLast" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="FolderBaiTap16042024" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="alinkedlist.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="alinkedlist" />
+      <option name="MAIN_CLASS_NAME" value="alinkedlist.LinkedListSelfTest" />
+      <option name="METHOD_NAME" value="testInsertLast" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ArrayListTest" />
+        <item itemvalue="JUnit.LinkedListSelfTest" />
+        <item itemvalue="JUnit.LinkedListSelfTest.testDeleteLast" />
+        <item itemvalue="JUnit.LinkedListSelfTest.testDeleteFirst" />
+        <item itemvalue="JUnit.LinkedListSelfTest.testInsertLast" />
+        <item itemvalue="JUnit.LinkedListSelfTest.testInsertFirst" />
       </list>
     </recent_temporary>
   </component>
@@ -104,11 +184,17 @@
       <workItem from="1713232867083" duration="2724000" />
       <workItem from="1713239321633" duration="689000" />
       <workItem from="1713242387539" duration="2239000" />
-      <workItem from="1713261783577" duration="358000" />
+      <workItem from="1713261783577" duration="505000" />
+      <workItem from="1713272639718" duration="1474000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/FolderBaiTap16042024$LinkedListSelfTest.ic" NAME="LinkedListSelfTest Coverage Results" MODIFIED="1713274289707" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>alinkedlist.*</FILTER>
+    </SUITE>
   </component>
 </project>

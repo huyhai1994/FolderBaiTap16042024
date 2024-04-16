@@ -14,14 +14,14 @@ public class LinkedListSelf {
     public void insertFirst(Object input_value) {
         /**
          * This method is used to insert a new node at the beginning of the LinkedList.
-         * It increases the size of the LinkedList by one and then creates a new node with the given input_value.
+         * It increases the numberOfNodes of the LinkedList by one and then creates a new node with the given input_value.
          * If the head of the LinkedList is null, the new node is set as both the head and tail.
          * Otherwise, the new node is linked to the current head and the head is updated to the new node.
          *
          * @param input_value the data to be stored in the new node
          */
         Node node = new Node(input_value);
-        increaseLinkedListSizeByOne();
+        increaseLinkedListnumberOfNodesByOne();
         boolean checkIfHeadPointToNull = this.head==null;
         if (checkIfHeadPointToNull) {
             this.head = node;
@@ -34,13 +34,13 @@ public class LinkedListSelf {
     public void insertLast(Object input_value) {
         /**
          * This method is used to insert a new node at the end of the LinkedList.
-         * It increases the size of the LinkedList by one and then creates a new node with the given input_value.
+         * It increases the numberOfNodes of the LinkedList by one and then creates a new node with the given input_value.
          * If the tail of the LinkedList is null, the new node is set as both the head and tail.
          * Otherwise, the new node is linked to the current tail and the tail is updated to the new node.
          *
          * @param input_value the data to be stored in the new node
          */
-       increaseLinkedListSizeByOne();
+       increaseLinkedListnumberOfNodesByOne();
         Node node = new Node(input_value);
         boolean checkIfTailPointToNull = this.tail == null;
         if (checkIfTailPointToNull) {
@@ -55,17 +55,17 @@ public class LinkedListSelf {
         /**
          * This method is used to delete the first node from the LinkedList.
          * It updates the head of the LinkedList to the second node in the list.
-         * Finally, it reduces the size of the LinkedList by one.
+         * Finally, it reduces the numberOfNodes of the LinkedList by one.
          *
          * @return void
          */
         boolean isLinkedListHasOneNode = numberOfNodes==1;
         if(isLinkedListHasOneNode){
             head.link = null;
-            reduceLinkedListSizeByOne();
+            reduceLinkedListnumberOfNodesByOne();
         }
         head = this.head.link;
-        reduceLinkedListSizeByOne();
+        reduceLinkedListnumberOfNodesByOne();
     }
 
     public void deleteLast(){
@@ -73,7 +73,7 @@ public class LinkedListSelf {
          * This method is used to delete the last node from the LinkedList.
          * It traverses the LinkedList from the head node and finds the second last node.
          * Then it sets the tail of the LinkedList to the second last node and sets its link to null.
-         * Finally, it reduces the size of the LinkedList by one.
+         * Finally, it reduces the numberOfNodes of the LinkedList by one.
          *
          * @return void
          */
@@ -84,7 +84,7 @@ public class LinkedListSelf {
         }
         tail = current;
         tail.link = null;
-        reduceLinkedListSizeByOne();
+        reduceLinkedListnumberOfNodesByOne();
     }
     public void deleteNodeInsideLinkedList(int index){
 
@@ -136,10 +136,10 @@ public class LinkedListSelf {
         }
 
     }
-    private void increaseLinkedListSizeByOne(){
+    private void increaseLinkedListnumberOfNodesByOne(){
         numberOfNodes++;
     }
-        private void reduceLinkedListSizeByOne(){
+        private void reduceLinkedListnumberOfNodesByOne(){
             numberOfNodes--;
         }
 }

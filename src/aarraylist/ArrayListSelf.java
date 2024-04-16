@@ -2,7 +2,7 @@ package aarraylist;
 
 public class ArrayListSelf {
     private Object[] container;
-    private int size = 0;
+    private int numberOfNodes = 0;
     private static final int CAPACITY_OF_ARRAY_LIST = 10;
 
     public ArrayListSelf() {
@@ -10,8 +10,8 @@ public class ArrayListSelf {
     }
 
     public void add(Object object) {
-        this.container[size] = object;
-        size++;
+        this.container[numberOfNodes] = object;
+        numberOfNodes++;
     }
 
     public Object get(int index) {
