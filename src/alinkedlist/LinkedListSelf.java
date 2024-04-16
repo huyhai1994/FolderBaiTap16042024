@@ -62,7 +62,10 @@ public class LinkedListSelf {
         boolean isLinkedListHasOneNode = numberOfNodes==1;
         if(isLinkedListHasOneNode){
             head.link = null;
+            head = null;
+            tail = null;
             reduceLinkedListSizeByOne();
+            return;
         }
         head = this.head.link;
         reduceLinkedListSizeByOne();
@@ -87,9 +90,21 @@ public class LinkedListSelf {
         reduceLinkedListSizeByOne();
     }
     public void deleteNodeInsideLinkedList(int index){
-
-
-
+        Node beforeCurrentNode = this.head;
+        Node CurrentNode = this.head.link;
+        Node afterCurrentNode = CurrentNode.link;
+         for (int i = 0; i < numberOfNodes; i++) {
+            if(i == index-1){  
+                beforeCurrentNode.link = afterCurrentNode;
+                CurrentNode.link = null;
+                reduceLinkedListSizeByOne();
+                return;
+            }
+            beforeCurrentNode = beforeCurrentNode.link;
+            CurrentNode = CurrentNode.link;
+            afterCurrentNode = afterCurrentNode.link;
+         }
+         
     }
     public void displayList(){
         /**
@@ -98,10 +113,10 @@ public class LinkedListSelf {
          *
          * @return void
          */
-        Node temp = this.head;
-        while (temp!= null){
-            System.out.print(temp.info + " ");
-            temp = temp.link;
+        Node CurrentNode = this.head;
+        while (CurrentNode!= null){
+            System.out.print(CurrentNode.info + " ");
+            CurrentNode = CurrentNode.link;
         }
     }
     public int searchAnNodeInfoInLinkedList(Object node_info){

@@ -1,5 +1,3 @@
-import java.lang.reflect.Array;
-
 public class Main {
     public static void main(String[] args) {
         int[] Output = new int[3];

@@ -7,11 +7,11 @@ public class LinkedListTest {
         linkedListSelf.insertFirst("2");
         linkedListSelf.insertFirst("3");
         linkedListSelf.insertFirst("4");
-        linkedListSelf.insertFirst("4");
         linkedListSelf.insertFirst("5");
         linkedListSelf.insertFirst("6");
         linkedListSelf.displayList();
         System.out.println(" ");
-        System.out.println(linkedListSelf.searchAnNodeInfoInLinkedList("2"));
+        linkedListSelf.deleteNodeInsideLinkedList(1);
+        linkedListSelf.displayList();
     }
 }
