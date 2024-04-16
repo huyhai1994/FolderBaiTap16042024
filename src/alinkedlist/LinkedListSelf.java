@@ -90,6 +90,7 @@ public class LinkedListSelf {
         reduceLinkedListSizeByOne();
     }
     public void deleteNodeInsideLinkedList(int index){
+        
         Node beforeCurrentNode = this.head;
         Node CurrentNode = this.head.link;
         Node afterCurrentNode = CurrentNode.link;
@@ -106,7 +107,7 @@ public class LinkedListSelf {
          }
          
     }
-    public void displayList(){
+    public void displayAll(){
         /**
          * This method is used to display the LinkedList.
          * It traverses the LinkedList from the head node and prints the data of each node.
@@ -115,9 +116,10 @@ public class LinkedListSelf {
          */
         Node CurrentNode = this.head;
         while (CurrentNode!= null){
-            System.out.print(CurrentNode.info + " ");
+            System.out.println(CurrentNode.info);
             CurrentNode = CurrentNode.link;
         }
+        System.out.println("-------------------------------------------------------------------");
     }
     public int searchAnNodeInfoInLinkedList(Object node_info){
         /**
@@ -139,6 +141,41 @@ public class LinkedListSelf {
             current = current.link;
         }
         return locationOfSearchingNode;
+    }
+        /**
+     * This method is used to search for a specific node's information in the LinkedList based on a given student's GPA.
+     * It traverses the LinkedList from the head node and compares the GPA of each node with the given student_GPA.
+     * If a match is found, it prints the information of the matching node.
+     *
+     * @param student_GPA the minimum GPA to search for in the LinkedList
+     */
+    public void searchAnNodeInfoInLinkedList(double student_GPA){
+        
+        Node current = head;
+        System.out.println("Danh sach Sinh vien co diem lon hon: " + student_GPA + " : ");
+        for (int i = 0; i < numberOfNodes; i++) {
+            if(((Student) current.info).getGPA() >= student_GPA){
+                System.out.println(current.info);
+            }
+            current = current.link;
+        }
+    }
+
+    /**
+     * This method is used to search for a specific node's information in the LinkedList based on a given student's ID.
+     * It traverses the LinkedList from the head node and compares the ID of each node with the given student_id.
+     * If a match is found, it prints the information of the matching node.
+     *
+     * @param student_id the ID of the student to search for in the LinkedList
+     */
+    public void searchAnNodeInfoInLinkedList(int student_id){
+        Node current = head;
+        for (int i = 0; i < numberOfNodes; i++) {
+            if(((Student) current.info).getId() == student_id){
+                System.out.println(current.info);
+            }
+            current = current.link;
+        }
     }
     public void updateNodeInfoInLinkedList(int index, Object node_info){
 

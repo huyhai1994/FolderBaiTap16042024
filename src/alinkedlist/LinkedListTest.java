@@ -2,16 +2,26 @@ package alinkedlist;
 
 public class LinkedListTest {
     public static void main(String[] args) {
-        LinkedListSelf linkedListSelf = new LinkedListSelf();
-        linkedListSelf.insertFirst("1");
-        linkedListSelf.insertFirst("2");
-        linkedListSelf.insertFirst("3");
-        linkedListSelf.insertFirst("4");
-        linkedListSelf.insertFirst("5");
-        linkedListSelf.insertFirst("6");
-        linkedListSelf.displayList();
-        System.out.println(" ");
-        linkedListSelf.deleteNodeInsideLinkedList(1);
-        linkedListSelf.displayList();
+
+
+        Student student1 = new Student(1,"Thuy","nguyenthuy123@gmail.com",8.0);
+        Student student2 = new Student(2,"Mai","nguyenmaix123@gmail.com",5.0);
+        Student student3 = new Student(3,"Thanh","nguyenThanh123@gmail.com",9.0);
+        Student student4 = new Student(4,"Hai","nguyenhai926@gmail.com",7.0);
+        Student student5 = new Student(5,"Huong","nguyenHuong123@gmail.com",10.0);
+        Student student6 = new Student(6,"Duy","nguyenduy321@gmail.com",6.0);
+
+        LinkedListSelf studentManagerList = new LinkedListSelf();
+        studentManagerList.insertFirst(student1);
+        studentManagerList.insertFirst(student2);
+        studentManagerList.insertFirst(student3);
+        studentManagerList.insertFirst(student4);
+        studentManagerList.insertFirst(student5);
+        studentManagerList.insertFirst(student6);
+        studentManagerList.displayAll();
+        studentManagerList.deleteNodeInsideLinkedList(2);
+        studentManagerList.displayAll();
+        studentManagerList.searchAnNodeInfoInLinkedList(8.0);
+        studentManagerList.searchAnNodeInfoInLinkedList(3);
     }
 }
