@@ -1,10 +1,10 @@
 package alinkedlist;
 
 public class Node {
-    private Object data;
+    public Object info;
     public Node link;
-    public Node(Object data){
-        this.data = data;
+    public Node(Object input_data){
+        this.info = input_data;
         this.link = null;
     }
 

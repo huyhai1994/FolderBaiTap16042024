@@ -7,5 +7,8 @@ public class LinkedListTest {
         linkedListSelf.insertFirst("2");
         linkedListSelf.insertFirst("3");
         linkedListSelf.insertFirst("4");
+        linkedListSelf.displayList();
+        linkedListSelf.deleteFirst();
+        linkedListSelf.displayList();
     }
 }
