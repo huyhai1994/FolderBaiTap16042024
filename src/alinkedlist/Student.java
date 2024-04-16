@@ -17,7 +17,7 @@ public class Student {
     }
     @Override
     public String toString(){
-        return "Student [id =" + id + " ,name" + name + ", email" + email + ", GPA = " + GPA +"]";
+        return "Student [id = " + id + " ,name " + name + " , email" + email + " , GPA = " + GPA +"]";
     }
     public double getGPA() {
         return GPA;

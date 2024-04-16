@@ -23,5 +23,8 @@ public class LinkedListTest {
         studentManagerList.displayAll();
         studentManagerList.searchAnNodeInfoInLinkedList(8.0);
         studentManagerList.searchAnNodeInfoInLinkedList(3);
+        studentManagerList.searchAnNodeInfoInLinkedList(5);
+        studentManagerList.searchAnNodeInfoInLinkedList("Mai");
+
     }
 }

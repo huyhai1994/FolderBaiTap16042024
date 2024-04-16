@@ -169,9 +169,20 @@ public class LinkedListSelf {
      * @param student_id the ID of the student to search for in the LinkedList
      */
     public void searchAnNodeInfoInLinkedList(int student_id){
+        System.out.println("Sinh vien co id " + student_id + " : ");
         Node current = head;
         for (int i = 0; i < numberOfNodes; i++) {
             if(((Student) current.info).getId() == student_id){
+                System.out.println(current.info);
+            }
+            current = current.link;
+        }
+    }
+    public void searchAnNodeInfoInLinkedList(String student_name){
+        System.out.println("Sinh vien co ten " + student_name + " : ");
+        Node current = head;
+        for (int i = 0; i < numberOfNodes; i++) {
+            if(((Student) current.info).getName() == student_name){
                 System.out.println(current.info);
             }
             current = current.link;
