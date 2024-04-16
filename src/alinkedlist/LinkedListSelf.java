@@ -59,6 +59,11 @@ public class LinkedListSelf {
          *
          * @return void
          */
+        boolean isLinkedListHasOneNode = numberOfNodes==1;
+        if(isLinkedListHasOneNode){
+            head.link = null;
+            reduceLinkedListSizeByOne();
+        }
         head = this.head.link;
         reduceLinkedListSizeByOne();
     }
@@ -80,6 +85,11 @@ public class LinkedListSelf {
         tail = current;
         tail.link = null;
         reduceLinkedListSizeByOne();
+    }
+    public void deleteNodeInsideLinkedList(int index){
+
+
+
     }
     public void displayList(){
         /**
