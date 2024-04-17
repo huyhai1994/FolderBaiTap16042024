@@ -1,5 +1,7 @@
 package alinkedlist;
 
+import student.Student;
+
 public class LinkedListSelf {
     public Node head;
     public Node tail;
@@ -22,15 +24,16 @@ public class LinkedListSelf {
          */
         Node node = new Node(input_value);
         increaseLinkedListSizeByOne();
-        boolean checkIfHeadPointToNull = this.head==null;
+        boolean checkIfHeadPointToNull = this.head == null;
         if (checkIfHeadPointToNull) {
             this.head = node;
             this.tail = node;
-        }else{
+        } else {
             node.link = this.head;
             this.head = node;
         }
     }
+
     public void insertLast(Object input_value) {
         /**
          * This method is used to insert a new node at the end of the LinkedList.
@@ -40,18 +43,19 @@ public class LinkedListSelf {
          *
          * @param input_value the data to be stored in the new node
          */
-       increaseLinkedListSizeByOne();
+        increaseLinkedListSizeByOne();
         Node node = new Node(input_value);
         boolean checkIfTailPointToNull = this.tail == null;
         if (checkIfTailPointToNull) {
             this.tail = node;
             this.head = node;
-        }else{
+        } else {
             this.tail.link = node;
             this.tail = node;
         }
     }
-    public void deleteFirst(){
+
+    public void deleteFirst() {
         /**
          * This method is used to delete the first node from the LinkedList.
          * It updates the head of the LinkedList to the second node in the list.
@@ -59,8 +63,8 @@ public class LinkedListSelf {
          *
          * @return void
          */
-        boolean isLinkedListHasOneNode = numberOfNodes==1;
-        if(isLinkedListHasOneNode){
+        boolean isLinkedListHasOneNode = numberOfNodes == 1;
+        if (isLinkedListHasOneNode) {
             head.link = null;
             head = null;
             tail = null;
@@ -71,7 +75,7 @@ public class LinkedListSelf {
         reduceLinkedListSizeByOne();
     }
 
-    public void deleteLast(){
+    public void deleteLast() {
         /**
          * This method is used to delete the last node from the LinkedList.
          * It traverses the LinkedList from the head node and finds the second last node.
@@ -81,7 +85,7 @@ public class LinkedListSelf {
          * @return void
          */
         Node current = this.head;
-        int nodeBeforeTailNode = numberOfNodes-2;
+        int nodeBeforeTailNode = numberOfNodes - 2;
         for (int index = 0; index < nodeBeforeTailNode; index++) {
             current = current.link;
         }
@@ -89,13 +93,14 @@ public class LinkedListSelf {
         tail.link = null;
         reduceLinkedListSizeByOne();
     }
-    public void deleteNodeInsideLinkedList(int index){
-        
+
+    public void deleteNodeInsideLinkedList(int index) {
+
         Node beforeCurrentNode = this.head;
         Node CurrentNode = this.head.link;
         Node afterCurrentNode = CurrentNode.link;
-         for (int i = 0; i < numberOfNodes; i++) {
-            if(i == index-1){  
+        for (int i = 0; i < numberOfNodes; i++) {
+            if (i == index - 1) {
                 beforeCurrentNode.link = afterCurrentNode;
                 CurrentNode.link = null;
                 reduceLinkedListSizeByOne();
@@ -104,10 +109,11 @@ public class LinkedListSelf {
             beforeCurrentNode = beforeCurrentNode.link;
             CurrentNode = CurrentNode.link;
             afterCurrentNode = afterCurrentNode.link;
-         }
-         
+        }
+
     }
-    public void displayAll(){
+
+    public void displayAll() {
         /**
          * This method is used to display the LinkedList.
          * It traverses the LinkedList from the head node and prints the data of each node.
@@ -115,13 +121,14 @@ public class LinkedListSelf {
          * @return void
          */
         Node CurrentNode = this.head;
-        while (CurrentNode!= null){
+        while (CurrentNode != null) {
             System.out.println(CurrentNode.info);
             CurrentNode = CurrentNode.link;
         }
         System.out.println("-------------------------------------------------------------------");
     }
-    public int searchAnNodeInfoInLinkedList(Object node_info){
+
+    public int searchAnNodeInfoInLinkedList(Object node_info) {
         /**
          * This method is used to search for a specific node's information in the LinkedList.
          * It traverses the LinkedList from the head node and compares the information of each node with the given node_info.
@@ -133,28 +140,29 @@ public class LinkedListSelf {
         Node current = head;
         int locationOfSearchingNode = 0;
         for (int i = 0; i < numberOfNodes; i++) {
-            if(current.info == node_info){
+            if (current.info == node_info) {
                 locationOfSearchingNode = i;
-            } else{
+            } else {
                 return -1;
             }
             current = current.link;
         }
         return locationOfSearchingNode;
     }
-        /**
+
+    /**
      * This method is used to search for a specific node's information in the LinkedList based on a given student's GPA.
      * It traverses the LinkedList from the head node and compares the GPA of each node with the given student_GPA.
      * If a match is found, it prints the information of the matching node.
      *
      * @param student_GPA the minimum GPA to search for in the LinkedList
      */
-    public void searchAnNodeInfoInLinkedList(double student_GPA){
-        
+    public void searchAnNodeInfoInLinkedList(double student_GPA) {
+
         Node current = head;
         System.out.println("Danh sach Sinh vien co diem lon hon: " + student_GPA + " : ");
         for (int i = 0; i < numberOfNodes; i++) {
-            if(((Student) current.info).getGPA() >= student_GPA){
+            if (((Student) current.info).getGPA() > student_GPA) {
                 System.out.println(current.info);
             }
             current = current.link;
@@ -168,41 +176,45 @@ public class LinkedListSelf {
      *
      * @param student_id the ID of the student to search for in the LinkedList
      */
-    public void searchAnNodeInfoInLinkedList(int student_id){
+    public void searchAnNodeInfoInLinkedList(int student_id) {
         System.out.println("Sinh vien co id " + student_id + " : ");
         Node current = head;
         for (int i = 0; i < numberOfNodes; i++) {
-            if(((Student) current.info).getId() == student_id){
+            if (((Student) current.info).getId() == student_id) {
                 System.out.println(current.info);
             }
             current = current.link;
         }
     }
-    public void searchAnNodeInfoInLinkedList(String student_name){
+
+    public void searchAnNodeInfoInLinkedList(String student_name) {
         System.out.println("Sinh vien co ten " + student_name + " : ");
         Node current = head;
         for (int i = 0; i < numberOfNodes; i++) {
-            if(((Student) current.info).getName() == student_name){
+            if (((Student) current.info).getName() == student_name) {
                 System.out.println(current.info);
             }
             current = current.link;
         }
     }
-    public void updateNodeInfoInLinkedList(int index, Object node_info){
+
+    public void updateNodeInfoInLinkedList(int index, Object node_info) {
 
         Node current = head;
         for (int i = 0; i < numberOfNodes; i++) {
-            if(i == index){
+            if (i == index) {
                 current.info = node_info;
             }
             current = current.link;
         }
 
     }
-    private void increaseLinkedListSizeByOne(){
+
+    private void increaseLinkedListSizeByOne() {
         numberOfNodes++;
     }
-        private void reduceLinkedListSizeByOne(){
-            numberOfNodes--;
-        }
+
+    private void reduceLinkedListSizeByOne() {
+        numberOfNodes--;
+    }
 }

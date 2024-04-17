@@ -1,5 +1,7 @@
 package aarraylist;
 
+import student.Student;
+
 public class ArrayListSelf {
     private Object[] container;
     private int size = 0;
@@ -11,8 +13,8 @@ public class ArrayListSelf {
 
     public void add(Object object) {
         boolean isTheListIsFull = (size >= container.length);
-        if(isTheListIsFull) {
-            Object [] newArrayTwiceOfCurrentArrayCapacity = new Object[container.length * 2];
+        if (isTheListIsFull) {
+            Object[] newArrayTwiceOfCurrentArrayCapacity = new Object[container.length * 2];
             System.arraycopy(container, 0,
                     newArrayTwiceOfCurrentArrayCapacity, 0, container.length);
             container = newArrayTwiceOfCurrentArrayCapacity;
@@ -36,6 +38,7 @@ public class ArrayListSelf {
         this.container[index] = object;
         size++;
     }
+
     public void remove(int index) {
         for (int i = index; i < size - 1; i++) {
             this.container[i] = this.container[i + 1];
@@ -43,18 +46,31 @@ public class ArrayListSelf {
         this.container[size - 1] = null;
         size--;
     }
-    public void removeFirst(){
+
+    public void removeFirst() {
         this.container[0] = null;
         size--;
     }
-    public void removeLast(){
+
+    public void removeLast() {
         this.container[size - 1] = null;
         size--;
     }
+
     public void readList() {
+        System.out.println("--------------------------------------------------------");
         for (Object object : container) {
             boolean isObjectNotNull = object != null;
             if (isObjectNotNull)
+                System.out.println(object);
+        }
+    }
+
+    public void readList(double student_GPA) {
+        System.out.println("Danh sach Sinh vien co diem lon hon: " + student_GPA + " : ");
+        for (Object object : container) {
+            boolean isObjectNotNull = object != null;
+            if (isObjectNotNull && ((Student) object).getGPA() > student_GPA)
                 System.out.println(object);
         }
     }

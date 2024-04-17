@@ -1,5 +1,7 @@
 package alinkedlist;
 
+import student.Student;
+
 public class LinkedListTest {
     public static void main(String[] args) {
 

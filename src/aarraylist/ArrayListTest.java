@@ -1,6 +1,6 @@
 package aarraylist;
 
-import alinkedlist.Student;
+import student.Student;
 
 public class ArrayListTest {
     public static void main(String[] args) {
@@ -21,5 +21,7 @@ public class ArrayListTest {
         arrayListSelf.readList();
         arrayListSelf.remove(3);
         arrayListSelf.readList();
+
+        arrayListSelf.readList(8.0);
     }
 }

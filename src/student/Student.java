@@ -1,4 +1,4 @@
-package alinkedlist;
+package student;
 
 public class Student {
     private int id;
