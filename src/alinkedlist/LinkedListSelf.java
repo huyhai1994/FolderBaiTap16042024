@@ -24,8 +24,8 @@ public class LinkedListSelf {
          */
         Node node = new Node(input_value);
         increaseLinkedListSizeByOne();
-        boolean checkIfHeadPointToNull = this.head == null;
-        if (checkIfHeadPointToNull) {
+        boolean isListHasOnlyOneNode = this.head == null;
+        if (isListHasOnlyOneNode) {
             this.head = node;
             this.tail = node;
         } else {
@@ -45,8 +45,8 @@ public class LinkedListSelf {
          */
         increaseLinkedListSizeByOne();
         Node node = new Node(input_value);
-        boolean checkIfTailPointToNull = this.tail == null;
-        if (checkIfTailPointToNull) {
+        boolean isListHasOnlyOneNode = this.tail == null;
+        if (isListHasOnlyOneNode) {
             this.tail = node;
             this.head = node;
         } else {
@@ -142,8 +142,6 @@ public class LinkedListSelf {
         for (int i = 0; i < numberOfNodes; i++) {
             if (current.info == node_info) {
                 locationOfSearchingNode = i;
-            } else {
-                return -1;
             }
             current = current.link;
         }
